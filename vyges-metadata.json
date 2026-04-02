@@ -14,7 +14,7 @@
     "digital"
   ],
   "created": "2026-04-01T05:09:17Z",
-  "updated": "2026-04-01T05:09:17Z",
+  "updated": "2026-04-02T04:30:00Z",
   "source": {
     "type": "git",
     "url": "https://github.com/chipsalliance/caliptra-rtl",
@@ -30,7 +30,43 @@
     }
   ],
   "interfaces": [],
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "H_OKAY",
+      "type": "bit",
+      "default": "1'b0"
+    },
+    {
+      "name": "H_ERROR",
+      "type": "bit",
+      "default": "1'b1"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "32"
+    },
+    {
+      "name": "DATA_BYTE_WIDTH",
+      "type": "int",
+      "default": "DATA_WIDTH / 8"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "bit",
+      "default": "0"
+    },
+    {
+      "name": "AHB_DATA_WIDTH",
+      "type": "int",
+      "default": "64"
+    },
+    {
+      "name": "AHB_ADDR_WIDTH",
+      "type": "int",
+      "default": "32"
+    }
+  ],
   "architecture": {
     "type": "peripheral",
     "features": []
@@ -54,5 +90,50 @@
     "schema": {
       "version": "1.0.0"
     }
-  }
+  },
+  "rtl_files": [
+    "rtl/ahb_defines_pkg.sv",
+    "rtl/ahb_slv_sif.sv",
+    "rtl/ahb_to_reg_adapter.sv",
+    "rtl/apb_slv_sif.sv",
+    "rtl/caliptra_2ff_sync.sv",
+    "rtl/caliptra_ahb_srom.sv",
+    "rtl/caliptra_icg.sv",
+    "rtl/caliptra_sram.sv",
+    "rtl/clk_gate.sv",
+    "rtl/interrupt_regs.sv",
+    "rtl/interrupt_regs_pkg.sv",
+    "rtl/interrupt_regs_uvm.sv",
+    "rtl/skidbuffer.v",
+    "rtl/caliptra_macros.svh",
+    "rtl/caliptra_sva.svh",
+    "rtl/ahb_defines_pkg.sv",
+    "rtl/ahb_slv_sif.sv",
+    "rtl/ahb_to_reg_adapter.sv",
+    "rtl/apb_slv_sif.sv",
+    "rtl/caliptra_2ff_sync.sv",
+    "rtl/caliptra_ahb_srom.sv",
+    "rtl/caliptra_icg.sv",
+    "rtl/caliptra_sram.sv",
+    "rtl/clk_gate.sv",
+    "rtl/interrupt_regs.sv",
+    "rtl/interrupt_regs_pkg.sv",
+    "rtl/interrupt_regs_uvm.sv",
+    "rtl/skidbuffer.v",
+    "rtl/caliptra_macros.svh",
+    "rtl/caliptra_sva.svh"
+  ],
+  "rtl_quality": {
+    "module_prefixed": true,
+    "defines_prefixed": true,
+    "header_guards": false,
+    "one_module_per_file": true,
+    "self_contained_includes": false,
+    "no_translate_pragmas": true,
+    "lint_clean": false,
+    "no_casex": true,
+    "width_clean": false,
+    "no_sv_keyword_conflicts": true
+  },
+  "defines": []
 }
